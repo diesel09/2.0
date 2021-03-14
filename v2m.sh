@@ -142,7 +142,7 @@ if [ $opcion = 6 ]; then
      
     cd v2ray/
 
-    sed '/$iddel/d' config.json
+    sed "/$iddel/d" config.json
 
     sh v2m.sh
 
