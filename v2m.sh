@@ -34,7 +34,7 @@ if [ $opcion = 1 ]; then
 
     clear
 
-    sed -i '9a\            { "id": "tu-id-aqui-xd", "alterId":aID, "level":1 }\$
+    sed -i '9a\            { "id": "tu-id-aqui-xd", "alterId":aID, "level":1 }\'
 
     sed -i '10s/$/,/' config.json
 
