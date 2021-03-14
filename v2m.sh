@@ -144,6 +144,8 @@ if [ $opcion = 6 ]; then
 
     sed "/$iddel/d" config.json
 
+    cd
+    
     sh v2m.sh
 
 fi
