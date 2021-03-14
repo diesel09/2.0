@@ -139,13 +139,13 @@ if [ $opcion = 6 ]; then
     clear
 
     read -p "INTRODUZCA EL ID QUE DESEA ELIMINAR: " iddel
-     
+
     cd v2ray/
 
-    sed "/$iddel/d" config.json
+    sed -i "/$iddel/d" ./config.json
 
     cd
-    
+
     sh v2m.sh
 
 fi
