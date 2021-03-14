@@ -21,7 +21,7 @@ echo
 read -p "Seleccionar una opción: " opcion
 
 if [ $opcion = 1 ]; then
-    
+
     cd v2ray/
 
     ./v2ctl uuid > userID
@@ -34,7 +34,9 @@ if [ $opcion = 1 ]; then
 
     clear
 
-    sed -i '10a\            { "id": "tu-id-aqui-xd", "alterId":aID, "level":1 }\' config.json
+    sed -i '9a\            { "id": "tu-id-aqui-xd", "alterId":aID, "level":1 }\$
+
+    sed -i '10s/$/,/' config.json
 
     sed -i "s/tu-id-aqui-xd/$userID/g" config.json
 
