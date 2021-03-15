@@ -55,6 +55,10 @@ echo --------
 echo
 read -p "guarda los datos y toca una tecla para continuar..." final
 
-echo PARA INICIAR EL ADMINISTRADOR EJECUTA sh v2m.sh
+chmod u+x v2m.sh
+
+alias v2m='sh v2m.sh'
+
+echo PARA INICIAR EL ADMINISTRADOR EJECUTA v2m
 
 exit
