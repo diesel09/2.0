@@ -55,6 +55,8 @@ echo --------
 echo
 read -p "guarda los datos y toca una tecla para continuar..." final
 
+cd
+
 chmod u+x v2m.sh
 
 alias v2m='sh v2m.sh'
