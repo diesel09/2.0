@@ -61,6 +61,8 @@ chmod u+x v2m.sh
 
 alias v2m='sh v2m.sh'
 
+alias v2m='sh v2m.sh' >> .bashrc
+
 echo PARA INICIAR EL ADMINISTRADOR EJECUTA v2m
 
 exit
