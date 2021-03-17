@@ -14,6 +14,7 @@ echo
 read -p "Ingrese el tipo de instalacion que desea: " tinst
 
 if [ $tinst = 1 ]; then
+    cd
     rm -r v2ray/
     rm v2m.sh
     tmux kill-session -t v0
@@ -45,6 +46,7 @@ read -p "Ingresa el AlterID que deseas Usar: " alterID
 sed -i "s/128/$alterID/g" config.json
 clear
 elif [ $tinst = 2 ]; then
+    cd
     mv v2ray/config.json config.json.b
     rm -r v2ray/
     rm v2m.sh
