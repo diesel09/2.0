@@ -16,6 +16,7 @@ echo 5- Iniciar Servicio V2ray
 echo 6- Eliminar ID
 echo 7- Agregar ID especifico
 echo 8- Cambiar Puerto
+echo 9- Comprobar Estado de V2ray
 echo 0- Salir
 echo -----------------------------
 echo EN CASO DE EQUIVOCARSE, SALIR DEL SCRIPT CON CTRL + c 
@@ -221,6 +222,23 @@ if [ $opcion = 8 ]; then
 
     sh v2m.sh
 
+fi
+
+if [ $opcion = 9 ]; then
+    cd
+    cd v2ray/
+    tmux ls > statustmux
+    cat statustmux
+    statmux=$(cat statustmux)
+    if [ $statmux = v0: 1 windows ]; then
+    clear
+    echo TMUX ENCENDIDO
+    sleep 4
+    else
+    clear
+    TMUX APAGADO
+    sleep 4
+    
 fi
 
 if [ $opcion = 0 ]; then
