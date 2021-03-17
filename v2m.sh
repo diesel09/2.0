@@ -236,10 +236,14 @@ if [ $opcion = 9 ]; then
     clear
     echo V2Ray ENCENDIDO
     sleep 4
+    cd
+    v2m
     else
     clear
     echo V2Ray APAGADO
     sleep 4
+    cd
+    v2m
     fi
 fi
 
