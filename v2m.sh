@@ -228,17 +228,19 @@ if [ $opcion = 9 ]; then
     cd
     cd v2ray/
     tmux ls > statustmux
+    sed -i 's/: 1.*//' statustmux
     cat statustmux
+    ls
     statmux=$(cat statustmux)
-    if [ $statmux = v0: 1 windows ]; then
+    if [ $statmux = v0 ]; then
     clear
-    echo TMUX ENCENDIDO
+    echo V2Ray ENCENDIDO
     sleep 4
     else
     clear
-    TMUX APAGADO
+    echo V2Ray APAGADO
     sleep 4
-    
+    fi
 fi
 
 if [ $opcion = 0 ]; then
