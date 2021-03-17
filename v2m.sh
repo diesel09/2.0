@@ -17,6 +17,7 @@ echo 6- Eliminar ID
 echo 7- Agregar ID especifico
 echo 8- Cambiar Puerto
 echo 9- Comprobar Estado de V2ray
+echo 10- Arreglar ID
 echo 0- Salir
 echo -----------------------------
 echo EN CASO DE EQUIVOCARSE, SALIR DEL SCRIPT CON CTRL + c 
@@ -246,7 +247,20 @@ if [ $opcion = 9 ]; then
     v2m
     fi
 fi
+if [ $opcion = 10 ]; then
 
+    cd
+    sed '/id/!d' v2ray/config.json
+
+    read -p "INTRODUZCA EL ULTIMO (SI APARECEN VARIOS) O EL UNICO ID: " rid
+    
+    cd
+    cd v2ray/    
+    sed -i "s/$rid\", \"alterId\":150, \"level\":1 }.*//" 
+    cd
+    v2m
+fi
+    
 if [ $opcion = 0 ]; then
 
     exit
