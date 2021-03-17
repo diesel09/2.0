@@ -24,7 +24,7 @@ echo
 read -p "Seleccionar una opción: " opcion
 
 if [ $opcion = 1 ]; then
-
+    cd
     cd v2ray/
 
     ./v2ctl uuid > userID
@@ -64,7 +64,7 @@ fi
 if [ $opcion = 2 ]; then
 
     clear
-
+    cd
     echo Tu Host actual es:
     echo
     sed '/host/!d' v2ray/config.json
@@ -88,13 +88,15 @@ if [ $opcion = 2 ]; then
     read -p "PRESIONA UNA TECLA PARA CONTINUAR..." tend
 
     clear
-
+    cd
     sh v2m.sh
 
 fi
 
 if [ $opcion = 3 ]; then
 
+    cd
+    
     sed '/id/!d' v2ray/config.json
 
     sed '/host/!d' v2ray/config.json
@@ -124,7 +126,7 @@ if [ $opcion = 4 ]; then
     echo SERVICIO V2RAY DETENIDO
 
     sleep 2
-
+    cd 
     sh v2m.sh
 
 fi
@@ -140,7 +142,7 @@ if [ $opcion = 5 ]; then
     echo SERVICIO V2RAY INICIADO
 
     sleep 2
-
+    cd
     sh v2m.sh
 
 fi
@@ -156,7 +158,7 @@ if [ $opcion = 6 ]; then
     echo A CONTINUACION TENDRAS UNA LISTA CON LOS ID EXISTENTES
 
     sleep 5
-
+    cd
     sed '/id/!d' v2ray/config.json
 
     read -p "INTRODUZCA EL ID QUE DESEA ELIMINAR: " iddel
@@ -174,7 +176,7 @@ fi
 if [ $opcion = 7 ]; then
 
     clear
-
+    cd
     cd v2ray/
 
     read -p "INTRODUCE EL NUEVO ID: " idcustom
@@ -206,7 +208,7 @@ fi
 if [ $opcion = 8 ]; then
 
     clear
-
+    cd
     read -p "INTRODUZCA EL NUEVO PUERTO: " puerto
 
     cd v2ray/
