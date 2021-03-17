@@ -117,7 +117,7 @@ if [ $opcion = 4 ]; then
 
     clear
 
-    tmux kill-server
+    tmux kill-session -t v0
 
     clear
 
