@@ -19,7 +19,7 @@ if [ $tinst = 1 ]; then
     rm v2m.sh
     tmux kill-session -t v0
     mkdir v2ray
-    apt install unzip zip wget tmux; cd v2ray/ && wget https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-64.zip && unzip v2ray-linux-64.zip && rm config.json && wget http://boompancho.000webhostapp.com/config.json
+    apt install unzip zip wget tmux -y; cd v2ray/ && wget https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-64.zip && unzip v2ray-linux-64.zip && rm config.json && wget http://boompancho.000webhostapp.com/config.json
 
 ./v2ctl uuid > userID
 
@@ -52,7 +52,7 @@ elif [ $tinst = 2 ]; then
     rm v2m.sh
     tmux kill-session -t v0
     mkdir v2ray
-    apt install unzip zip wget tmux; cd v2ray/; wget https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-64.zip; unzip v2ray-linux-64.zip; rm config.json; cd; mv config.json.b v2ray/config.json; cd
+    apt install unzip zip wget tmux -y; cd v2ray/; wget https://github.com/v2fly/v2ray-core/releases/download/v4.34.0/v2ray-linux-64.zip; unzip v2ray-linux-64.zip; rm config.json; cd; mv config.json.b v2ray/config.json; cd
 else
     echo Opcion no Valida, introduzca 1 o 2
 
