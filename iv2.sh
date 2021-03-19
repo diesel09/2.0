@@ -60,7 +60,7 @@ else
 fi
 cd
 
-wget wget https://raw.githubusercontent.com/diesel09/2.0/main/v2m2.sh
+wget wget https://raw.githubusercontent.com/diesel09/2.0/main/v2m.sh
 
 cd v2ray/
 
@@ -72,9 +72,9 @@ echo V2ray Funcionando
 
 read -p "toca una tecla para continuar..." final
 
-sed -i '/alias v2m="sh v2m2.sh"/d' ~/.bashrc
-sed -i "/PARA INICIAR ADMINISTRADOR V2RAY ESCRIBA:  v2m2/d" ~/.bashrc
-echo 'alias v2m="sh v2m2.sh"' >> ~/.bashrc
+sed -i '/alias v2m="sh v2m.sh"/d' ~/.bashrc
+sed -i "/PARA INICIAR ADMINISTRADOR V2RAY ESCRIBA:  v2m/d" ~/.bashrc
+echo 'alias v2m="sh v2m.sh"' >> ~/.bashrc
 echo 'echo -e "\033[97m   PARA INICIAR ADMINISTRADOR V2RAY ESCRIBA:  v2m "' >> ~/.bashrc
 
 read -p "guarda los datos y toca una tecla para continuar..." final
